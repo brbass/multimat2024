@@ -1,0 +1,120 @@
+%=============================================================================
+%
+% MULTIMAT 2024 Abstract Template
+% Adapted from the 2022 template used for the Zurich meeting
+%
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!!      ALL SUBMISSIONS MUST BE LIMITED TO 1 PAGE, NO EXCEPTIONS       !!!
+% !!!    ALL SUBMISSION SHOULD CONSIST IN PDF AND EDITABLE SOURCE FILE    !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%=============================================================================
+
+%=============================================================================
+%                    Formatting Options (do not modify)
+%=============================================================================
+\documentclass[11pt]{article}
+\usepackage{geometry,times,hyperref}
+\geometry{letterpaper,top=2.5cm,bottom=2.5cm,left=2.0cm,right=2.0cm}
+%\usepackage[letter, margin=1in]{geometry}
+\hypersetup{colorlinks=true, linkcolor=blue}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 2pt minus 1 pt}
+\sloppy
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+        \OLDthebibliography{#1}
+        \setlength{\parskip}{0pt}
+        \setlength{\itemsep}{3pt plus 0.3ex}
+}
+\newenvironment{AbstractTitle}{\begin{center} \bf \par\Large}{\par\addvspace{\bigskipamount} \end{center}}
+\newcommand\email[1]{\href{mailto:{#1}}{#1}}
+
+%=============================================================================
+%                       Useful packages and commands
+%=============================================================================
+\usepackage{graphicx}
+
+%=============================================================================
+%                       Declarations for Front Matter
+%=============================================================================
+\begin{document}
+
+\pagestyle{empty}
+
+%
+% <<< INSERT TITLE HERE >>> 
+%
+\begin{AbstractTitle}
+        MultiMat 2024 Abstract Template: Single Page Limit
+\end{AbstractTitle}
+
+%
+% <<< INSERT AUTHORS HERE >>> 
+%
+\begin{center}
+\textbf{A. Author$^\dagger$, B. Author$^\dagger$ and \underline{C. Presenter}$^\ddagger$$^\ast$}
+
+%
+% <<< INSERT AFFILIATIONS HERE >>> 
+%
+$^\dagger${
+             First Department, First Institution 
+             ({\tt author1@email.edu, author2@email.gov}) 
+          } \\
+
+$^\ddagger${
+             Second Department, Second Institution 
+             ({\tt author3@email.com})
+           }                   
+\end{center}
+
+%
+% <<< INSERT KEYWORDS HERE >>>
+%
+To be considered for a Poster/Oral presentation (specify one)
+
+\begin{center}
+\textbf{ABSTRACT}\\[1mm]
+\end{center}
+
+%
+% <<< INSERT ABSTRACT TEXT HERE >>>
+%
+Abstracts should be submitted including both a finished PDF file as well as the original \LaTeX\ source using this template.  Each abstract is limited to a single page of content and must use the unmodified margins and font size provided in this template.  Content here means the title, authors, text, and figures; references and acknowledgments can run over to a second page if needed.  Please e-mail your submission to \email{multimat2024@llnl.gov} with the subject line ``MultiMat 2024 Abstract Submission for [x]'' where [x] is the name of the speaker.
+
+The 11th International Conference on Numerical Methods for Multi-Material Fluid Flow (MultiMat 2024) will be held in Breckenridge, CO, USA on August 26--30, 2024. This conference brings together researchers from academic and laboratory institutions to discuss and push forward the state of the art in numerical methods for studying compressible multi-material flows. The presence and interaction of multiple materials with at times widely varying material properties poses unique challenges for a number of numerical techniques across a variety of physical processes, and contributions are welcome from researchers in a variety of disciplines and applications.  
+
+This conference follows on the prior MultiMat conferences held in Zurich (Switzerland 2022), Trento (Italy 2019), Santa Fe (NM, USA 2017), WÃ¼rzburg (Germany 2015), San Francisco (CA, USA 2013), Arcachon (France 2011), Pavia (Italy 2009), Prague (Czech Republic 2007), Oxford (UK 2005), and Paris (France 2002).
+
+%
+% <<< FIGURES ARE OPTIONAL >>>
+%
+\begin{figure}[htbp]
+\centering
+  %\includegraphics[height = 0.15\textheight]{Breckenridge_stock} \\
+  \caption{Breckenridge CO as seen from Mount Baldy
+           \label{fig:Breckenridge}}
+\end{figure}
+
+%
+% <<< REFERENCES ARE OPTIONAL >>>
+%
+
+\begin{thebibliography}{10}
+\bibitem{BibKey01} A. Author and B. Author,
+``Title of First Reference'',
+\textit{International Journal for Numerical Methods in Fluids}, 65(11-12), pp.~1295--1310, 2010.
+\bibitem{BibKey02} C. Author,
+``Title of Second Reference'',
+\textit{Computers and Fluids}, (submitted).
+\bibitem{BibKey03} D. Author, E. Author and F. Author
+``Title of Third Reference'',
+\textit{Journal of Computational Physics}, 229(16), pp.~5755--5787, 2010.
+\end{thebibliography}
+
+%
+% <<< INSERT OPTIONAL ACKNOWLEDGMENTS  >>>
+%
+The Authors acknowledge \ldots
+
+\end{document}
