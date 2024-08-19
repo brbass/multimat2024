@@ -1,0 +1,4880 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usepackage{animate}
+\usepackage{multicol}
+\usepackage{verbatim}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark, calc, arrows.meta}
+
+% Set theme
+\usecolortheme{seagull}
+
+% Number figures and tables
+\let\@@magyar@captionfix\relax
+\setbeamertemplate{caption}[numbered]
+
+% Add headline
+\setbeamertemplate{navigation symbols}{}
+\addtobeamertemplate{footline}{ % footline or headline
+    \leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=0.85\paperwidth,left,leftskip=0.5em,colsep=0.2em,ht=0.4cm,dp=0.0ex]{sidebar}%
+		\includegraphics[height=0.3cm]{figs/logo_llnl_black}%
+		\hspace{-1.3cm}
+		\scalebox{0.5}{LLNL-PRES-XXXXXX}
+        \usebeamercolor[fg]{section in head/foot}
+		\hfill
+        \scriptsize
+		\bfseries
+        \insertsection
+        %\hfill
+        %\usebeamercolor[fg]{navigation symbols}
+        %\insertbackfindforwardnavigationsymbol
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=0.15\paperwidth,right,colsep=0.2em,ht=0.4cm,dp=0.0ex]{sidebar}%
+        \usebeamercolor[fg]{navigation symbols}
+        \insertsectionnavigationsymbol
+        \insertbackfindforwardnavigationsymbol
+        \hfill
+        \scriptsize
+        \usebeamercolor[fg]{subsection in head/foot}
+        \insertframenumber%/\inserttotalframenumber
+    \end{beamercolorbox}%
+    }%
+    \vskip0.5pt%
+}{}
+
+
+% Set margins to be narrow
+\setbeamersize{text margin left=0.5cm, text margin right=0.5cm}
+
+\usefonttheme{serif}
+
+% Pretty circled numbers
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+\usetikzlibrary{arrows,automata}
+\usetikzlibrary{positioning}
+\usepackage{caption}
+
+% Algorithm
+\usepackage{algorithm,algpseudocode}
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+\algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
+\algtext*{Indent}
+\algtext*{EndIndent}
+
+\definecolor{col1}{HTML}{1b9e77} 
+\definecolor{col2}{HTML}{d95f02} 
+\definecolor{col3}{HTML}{7570b3} 
+\definecolor{col4}{HTML}{e7298a} 
+\definecolor{col5}{HTML}{66a61e} 
+\definecolor{col6}{HTML}{e6ab02} 
+\definecolor{col7}{HTML}{a6761d} 
+\definecolor{col8}{HTML}{666666} 
+
+% Set title font to be smaller
+\setbeamerfont{frametitle}{size=\Large}
+
+% Make tables a bit more spaced out
+\renewcommand{\arraystretch}{1.4}
+
+% So I can box verbatim
+\usepackage{fancyvrb}
+
+% So I can do dotted underline
+\usepackage[normalem]{ulem}
+% Added by lyx2lyx
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+
+\usepackage{algpseudocode,animate}
+
+% Define commands for algorithm
+% \algnewcommand\algorithmicforeach{\textbf{for each}}
+\end_preamble
+\options aspectratio=169,xcolor={dvipsnames}
+\use_default_options true
+\begin_modules
+graphicboxes
+\end_modules
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\branch Backup
+\selected 0
+\filename_suffix 0
+\color background background
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Multigroup smoothed particle radiation hydrodynamics
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Brody R.
+ Bassett
+\begin_inset Newline newline
+\end_inset
+
+J.
+ Michael Owen
+\end_layout
+
+\begin_layout Date
+\begin_inset VSpace -0.3cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+11th International Conference on Numerical Methods for Multi-Material Fluid Flow
+\begin_inset VSpace medskip
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+August 26,
+ 2024
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small{This work was performed under the auspices of the U.S.
+ Department of Energy by Lawrence Livermore National Laboratory under contract DE-AC52-07NA27344.
+ Lawrence Livermore National Security,
+ LLC}.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\size largest
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\size largest
+Introduction
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The goal:
+ multigroup radiative transfer compatible with SPH
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Smoothed particle hydrodynamics (SPH) uses no mesh
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This means no mesh tangling
+\end_layout
+
+\begin_layout Itemize
+The derivatives are based on a set of nearest neighbors
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The goal is to discretize the radiative transfer equations using the same meshless points
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This consistent discretization simplifies the coupling
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "55col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset VSpace -1cm
+\end_inset
+
+
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=0.98
+\backslash
+textwidth]{../../sph_rad_hydro/figs/sph_function}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Rad-hydro with SPH has numerous applications
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+The applications of meshfree radiation hydrodynamics include:
+\end_layout
+
+\begin_layout Itemize
+Simulating fluid instabilities in laser experiments
+\end_layout
+
+\begin_layout Itemize
+Ablation of an asteroid in planetary defense
+\end_layout
+
+\begin_layout Itemize
+Astrophysics,
+ including supernovae,
+ accretion disks,
+ star formation,
+ and large scale cosmological structure formation
+\end_layout
+
+\begin_layout Plain Layout
+Spheral excels at simulating complicated flows with instabilities.
+ A consistent,
+ robust radiation treatment allows us to consider high energy density problems that may be difficult to run in other codes.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "55col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset VSpace -0.6cm
+\end_inset
+
+
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+animategraphics[width=0.90
+\backslash
+textwidth,every=10]{5}{../../sph_rad_hydro/movies/planetary/scene}{00001}{00501}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset VSpace -1.1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align right
+
+\size scriptsize
+Nuclear disruption of an asteroid.
+ Video courtesy of Megan Syal.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This work extends the previous gray SPH rad hydro to multigroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This is an ICF-inspired ablation problem with gray diffusion
+\end_layout
+
+\begin_layout Itemize
+A multigroup version will be presented later
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+animategraphics[width=0.9
+\backslash
+textwidth]{5}{../../sph_rad_hydro/movies/ablation2d/annotated_mate}{0000}{0035}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The hydrodynamic fields move with the SPH particles
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+The points represent the locations of the SPH nodes
+\end_layout
+
+\begin_layout Itemize
+The color represents the magnitude of the pressure
+\end_layout
+
+\begin_layout Itemize
+The method is completely Lagrangian
+\end_layout
+
+\begin_layout Itemize
+The hydrodynamic properties move with the particles
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "55col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset VSpace -0.7cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+Pressure for a quarter-geometry blast wave
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset VSpace -0.8cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+animategraphics[height=0.8
+\backslash
+textheight,trim={8.5cm 6.5cm 2.5cm 1.8cm},loop]{5}{../../sph_rad_hydro/movies/blast_points/density}{0000}{0042}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Radiation moves through the SPH particles
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Radiation works on much smaller time scales than hydrodynamics
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This means we need to do an implicit solve
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The coupling between the radiation and hydrodynamics needs to be done correctly
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+As particles squish together,
+ there is work done on radiation pressure
+\end_layout
+
+\begin_layout Itemize
+As particles move,
+ radiation is dragged along with the fluid
+\end_layout
+
+\begin_layout Itemize
+The radiation transfers momentum to the fluid
+\end_layout
+
+\begin_layout Itemize
+The radiation heats up the fluid
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "55col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset VSpace -0.7cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+Radiation energy for a quarter-geometry blast wave
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset VSpace -0.8cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+animategraphics[height=0.8
+\backslash
+textheight,trim={8.5cm 6.5cm 2.5cm 1.8cm},loop]{5}{../../sph_rad_hydro/movies/blast_points/radiation}{0000}{0042}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Theory
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\size largest
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\size largest
+Theory
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The radiation and hydrodynamics equations are closely coupled
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+The important terms for coupling of radiation and hydrodynamics include radiation 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col1}{momentum}
+\end_layout
+
+\end_inset
+
+,
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col2}{emission}
+\end_layout
+
+\end_inset
+
+,
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col3}{absorption}
+\end_layout
+
+\end_inset
+
+,
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col4}{entrainment}
+\end_layout
+
+\end_inset
+
+,
+ and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col5}{work}
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Formula 
+\begin{align*}
+\text{mass} &  & \frac{D\rho}{Dt} & =-\rho\partial_{x}^{\alpha}v^{\alpha},\\
+\text{momentum} &  & \rho\frac{Dv^{\alpha}}{Dt} & =-\partial_{x}^{\alpha}p-{\color{col1}\sum_{g}\lambda_{g}\partial_{x}^{\alpha}E_{g}},\\
+\text{material energy} &  & \rho\frac{De}{Dt} & =-\partial_{x}^{\alpha}pv^{\alpha}-\sum_{g}\left({\color{col2}c\sigma_{a,g}B_{g}}+{\color{col3}c\sigma_{a,g}E_{g}}\right)+Q_{e},\\
+\text{radiation energy} &  & {\color{col4}\frac{DE_{g}}{Dt}} & =-{\color{col5}\frac{4}{3}E_{g}\partial_{x}^{\alpha}v^{\alpha}}+\partial_{x}^{\alpha}\frac{c\lambda_{g}}{\sigma_{t,g}}\partial_{x}^{\beta}E-{\color{col3}c\sigma_{a,g}E_{g}}+{\color{col2}c\sigma_{a,g}B_{g}}+Q_{E,g},
+\end{align*}
+
+\end_inset
+
+The diffusion and multigroup approximations have been applied here.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Radiation hydrodynamics operator split
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+The equations are operator split into hydrodynamics,
+ radiation,
+ and radiation work.
+\end_layout
+
+\begin_layout Frame
+\begin_inset VSpace 0.2em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Radiation
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Implicit 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col1}{time discretization}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+SPH-like 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col2}{spatial discretization}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "59col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace -1.7em
+\end_inset
+
+
+\begin_inset Formula 
+\begin{gather*}
+\rho{\color{col1}\frac{De}{Dt}}=-c\sigma_{a}B+c\sigma_{a}E+Q_{e},\\
+{\color{col1}\frac{DE_{g}}{Dt}}=-\frac{4}{3}E_{g}\partial_{x}^{\alpha}v^{\alpha}+{\color{col2}\partial_{x}^{\alpha}\frac{c\lambda_{g}}{\sigma_{t,g}}\partial_{x}^{\beta}E}-c\sigma_{a,g}E_{g}+c\sigma_{a,g}B_{g}+Q_{E,g}.
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0.4em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.2ex"
+width "100col%"
+height "0.7pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0.4em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Hydrodynamics
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Explicit 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col3}{time discretization}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+SPH 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col4}{spatial discretization}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col5}{Radiation momentum}
+\end_layout
+
+\end_inset
+
+ lagged
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "59col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2.1em
+\end_inset
+
+
+\begin_inset Formula 
+\begin{gather*}
+{\color{col3}\frac{D\rho}{Dt}}=-\rho\partial_{\alpha}v_{\alpha},\\
+\rho{\color{col3}\frac{Dv_{\alpha}}{Dt}}=-\partial_{\alpha}p-{\color{col5}\sum_{g}\lambda_{g}\partial_{x}^{\alpha}E_{g}},\\
+\rho{\color{col3}\frac{De}{Dt}}=-\partial_{\alpha}pv_{\alpha}.
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0.4em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.3ex"
+width "100col%"
+height "0.7pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0.4em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Radiation work
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Updated after the hydro step but before the radiation
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "59col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace 1.2em
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{DE_{g}}{Dt}=-\frac{4}{3}E_{g}\partial_{\alpha}v_{\alpha}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The time discretization is performed using nonlinear elimination
+\begin_inset Formula $^{\dagger}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "39col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+This method contains 
+\begin_inset Formula $G+1$
+\end_inset
+
+ diffusion solves per TRT iteration,
+ which represent much of the computational cost:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $G$
+\end_inset
+
+ solves for 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{col1} uncollided photons}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+1 solve for the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{col2} gray corrections}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Most equations are 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+color{col4} 0D}
+\end_layout
+
+\end_inset
+
+,
+ or spatially independent
+\end_layout
+
+\begin_layout Itemize
+Differs from Brunner et al.
+\begin_inset Formula $^{\dagger}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There,
+ 
+\begin_inset Formula $\zeta_{g}$
+\end_inset
+
+ calculated based on first-flight photons,
+ which adds 
+\begin_inset Formula $G$
+\end_inset
+
+ diffusion solves 
+\end_layout
+
+\begin_layout Itemize
+Here,
+ 
+\begin_inset Formula $\zeta_{g}$
+\end_inset
+
+ calculated using infinite medium solution,
+ as in Morel et al.
+\begin_inset Formula $^{\ddagger}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithmic}[1]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{$t=0$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{set initial conditions}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+While{$t$ < end time}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{
+\backslash
+textbf{material initialization:} {
+\backslash
+color{col4} evaluate $
+\backslash
+sigma_{a,g},
+\backslash
+sigma_{s,g},
+\backslash
+lambda_g$}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{
+\backslash
+textbf{hydrodynamics update:} {
+\backslash
+color{col4}explicit update to $
+\backslash
+rho^n,v^n,e^n_{
+\backslash
+text{hydro}}$}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{
+\backslash
+qquad calculate radiation momentum}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{
+\backslash
+textbf{radiation work:} {
+\backslash
+color{col4} update radiation energy density}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{
+\backslash
+textbf{material update:} {
+\backslash
+color{col4} update $
+\backslash
+sigma_a,
+\backslash
+sigma_s,
+\backslash
+lambda,c_v,f$}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Repeat{ (iteration for 
+\backslash
+textbf{thermal radiative transfer})}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{
+\backslash
+color{col1} solve for uncollided photons,
+ $E_{g}^{
+\backslash
+star}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{
+\backslash
+color{col4} calculate spectral term,
+ $
+\backslash
+zeta_g$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{
+\backslash
+color{col2} solve for gray corrections,
+ $E^{
+\backslash
+dagger}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{
+\backslash
+color{col4} combine these for inner update to $E_{g}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{
+\backslash
+color{col4} solve for $e$ with source from hydrodynamics update}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Until{converged}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State{$t = t + 
+\backslash
+Delta t^n$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+EndWhile
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\begin_layout Plain Layout
+
+$^
+\backslash
+dagger$Brunner et.
+ al,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Nonlinear Elimination Applied to Radiation Diffusion,
+\begin_inset Quotes erd
+\end_inset
+
+ NSE (2020)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$^
+\backslash
+ddagger$Morel et.
+ al,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Linear Multifrequency-Grey Acceleration Recast for Preconditioned Krylov Iterations,
+\begin_inset Quotes erd
+\end_inset
+
+ JCP (2007)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This is straightforward to add to an SPH code
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+
+\bar under
+Hydrodynamics
+\end_layout
+
+\begin_layout Itemize
+Add radiation momentum to RHS of velocity equation
+\end_layout
+
+\begin_layout Itemize
+Track energy gained/lost in specific thermal energy
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\bar under
+Thermal energy solve
+\end_layout
+
+\begin_layout Itemize
+Use the gained/lost energy in RHS of material solve
+\end_layout
+
+\begin_layout Itemize
+Solve the material energy equation using Newton iteration
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\bar under
+Radiation energy solve
+\end_layout
+
+\begin_layout Itemize
+Update radiation energy from radiation work term once hydrodynamics solve is complete
+\end_layout
+
+\begin_layout Itemize
+Solve diffusion system using linear solver,
+ e.g.
+ Hypre with AMG preconditioning
+\end_layout
+
+\begin_layout Itemize
+Iterate on scattering and emission sources until convergence
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Results
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\size largest
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\size largest
+Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Material and radiation temperatures equilibrate at the correct rates
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "39col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+Opacities of the form
+\begin_inset Formula 
+\[
+\rho10T^{-1}\nu_{g}^{-3},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $v_{g}$
+\end_inset
+
+ are group-averaged energies
+\end_layout
+
+\begin_layout Itemize
+Initial conditions:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Material 
+\begin_inset Formula $T$
+\end_inset
+
+:
+ 0.001 keV
+\end_layout
+
+\begin_layout Itemize
+Radiation 
+\begin_inset Formula $T$
+\end_inset
+
+:
+ 0.3 keV
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Let material and radiation temperatures come into equilibration
+\end_layout
+
+\begin_layout Itemize
+Compare different time steps to reference solution (provided by Tom Brunner)
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "59col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace -0.1em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=1.0
+\backslash
+columnwidth,clip]{../../multigroup_results/InfiniteEquilibrationPlot/figs/InfiniteEquilibration}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The manufactured solution tests the coupling terms
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "32col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace 2em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Process of verification:
+\end_layout
+
+\begin_layout Itemize
+Insert the solution into non-discretized equations to calculate sources
+\end_layout
+
+\begin_layout Itemize
+Use these sources in the discretized equation and calculate 
+\begin_inset Formula $e$
+\end_inset
+
+ and 
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Calculate error of numeric solution using the original manufactured solutions
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "65col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+The manufactured solutions are of the form
+\begin_inset Formula 
+\[
+k_{0}\left(1.2+\cos\left(k_{1}\left(x+t\right)\right)\cos\left(k_{2}\left(y+t\right)\right)\right)
+\]
+
+\end_inset
+
+for the internal and radiation energies.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\bar under
+Material energy
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+animategraphics[autoplay,loop,width=1.0
+\backslash
+textwidth]{4}{../../multigroup_results/ManufacturedPlot/figs/mat}{1}{21}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\bar under
+Radiation energy
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+animategraphics[autoplay,loop,width=1.0
+\backslash
+textwidth]{4}{../../multigroup_results/ManufacturedPlot/figs/rad}{1}{21}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The SPH and RK results converge at the expected rates
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\bar under
+Standard SPH kernels
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace -0.4em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The convergence agrees with the expected second-order convergence.
+\end_layout
+
+\begin_layout Itemize
+The convergence plot for 2D/3D is nearly identical to this one for 1D
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\bar under
+Reproducing kernels
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace -0.4em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Using quadratic kernels,
+ the convergence is third-order.
+\end_layout
+
+\begin_layout Itemize
+The RK diffusion solver struggles with 2D/3D
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset VSpace -1em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=1.0
+\backslash
+columnwidth,clip,trim={0cm 0cm 0cm 0.5cm}]{../../multigroup_results/ManufacturedPlot/figs/ManufacturedConvergence1d}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=1.0
+\backslash
+columnwidth,clip,trim={0cm 0cm 0cm 0.5cm}]{../../multigroup_results/ManufacturedPlot/figs/ManufacturedConvergenceRK1d}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This two-region problem tests shock propagation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This is a shock tube problem with significant radiation coupling
+\end_layout
+
+\begin_layout Itemize
+The results are compared to an ALE rad-hydro code,
+ Kull
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\bar under
+Hydro fields
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=1.0
+\backslash
+textwidth]{../../multigroup_results/TwoRegionPlot/figs/standard100/hydroFields0000}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\bar under
+Radiation energy
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=1.0
+\backslash
+textwidth]{../../multigroup_results/TwoRegionPlot/figs/standard100/TRrad0000}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The results agree well with the reference solution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\bar under
+Hydro fields
+\end_layout
+
+\begin_layout Itemize
+Note the overshoots near the shock front due to low resolution
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+animategraphics[autoplay,loop,width=1.0
+\backslash
+textwidth,every=10]{4}{../../multigroup_results/TwoRegionPlot/figs/standard100/hydroFields}{0000}{0198}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\bar under
+Radiation energy
+\end_layout
+
+\begin_layout Itemize
+There are small energy differences in a few groups
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+animategraphics[autoplay,loop,width=1.0
+\backslash
+textwidth,every=10]{4}{../../multigroup_results/TwoRegionPlot/figs/standard100/TRrad}{0000}{0198}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The temperatures are somewhat higher in Spheral than in Kull
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+May need to reduce time step for this problem to get better agreement
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\bar under
+Material temperature
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=1.0
+\backslash
+columnwidth,clip]{../../multigroup_results/TwoRegionPlot/figs/standard100/TRmatTemp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\bar under
+Radiation temperature
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=1.0
+\backslash
+columnwidth,clip]{../../multigroup_results/TwoRegionPlot/figs/standard100/TRradTemp}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The position of the interface agrees reasonably well
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+The plot shows the position of the interface between the two materials.
+ 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace 3em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The radiation leads to ablation as the right material heats up,
+ which accelerates the interface to the left
+\end_layout
+
+\begin_layout Itemize
+Comparing these rates ensures that the radiation travels through the material at the correct speeds
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "49col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace -0.1em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=1.0
+\backslash
+columnwidth,clip]{../../multigroup_results/TwoRegionPlot/figs/standard100/TRinterface}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+This ICF-like ablation problem tests multi-material coupling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace -0.1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The ablation problem is a simplified version of an inertial confinement fusion (ICF) capsule
+\begin_inset Formula $^{\dagger}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Instead of using a specified boundary source,
+ the helium is set to a high initial temperature
+\end_layout
+
+\begin_layout Itemize
+Increased gas densities to make mass matching easier
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Number of energy groups:
+ 4
+\end_layout
+
+\begin_layout Itemize
+The results are in cylindrical geometry
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Resizebox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+1.0
+\backslash
+columnwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Material
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Outer radius (cm)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Initial 
+\begin_inset Formula $\rho$
+\end_inset
+
+ (
+\begin_inset Formula $\text{g}\cdot\text{cm}^{-3}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Initial 
+\begin_inset Formula $T$
+\end_inset
+
+ (keV)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col2}{DT Gas}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.08628
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.0\times10^{-2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.7\times10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.45
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col5}{DT Ice}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0943
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.25$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4.2\times10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.45
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col3}{CH 1
+\backslash
+% Si}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1108
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.073$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8.6\times10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{col4}{Helium}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.0\times10^{-2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.66
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "39col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "foreground"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ../../sph_rad_hydro/figs/ablation_geom.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset VSpace 1em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Formula $^{\dagger}$
+\end_inset
+
+Robert Tipton,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+An ICF test problem for single group radiation-hydrodynamics codes
+\begin_inset Quotes erd
+\end_inset
+
+ (2016)
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Initial results for the ablation problem look promising
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{small}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+These will be compared to another rad-hydro code.
+ For now,
+ this shows that the code is running.
+ 
+\end_layout
+
+\begin_layout Frame
+Note:
+ May replace density with Kull results if those are working soon.
+ 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+animategraphics[width=1.0
+\backslash
+textwidth]{3}{../movies/ablation-h-only}{0000}{0023}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{small}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Conclusions
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\size largest
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\size largest
+Conclusions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Multigroup radiation hydrodynamics with SPH works
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "47col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\bar under
+Conclusions
+\end_layout
+
+\begin_layout Itemize
+Multigroup radiation hydrodynamics works well for smoothed particle hydrodynamics
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Equilibration at correct rates
+\end_layout
+
+\begin_layout Itemize
+Shocks propagate at expected velocities
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+This runs for complicated problems with multiple materials
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Need to verify this by comparison to other codes
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "47col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\bar under
+Future work
+\end_layout
+
+\begin_layout Itemize
+The second derivative for reproducing kernels does not work well with our diffusion solvers
+\end_layout
+
+\begin_layout Itemize
+Try extra solves for spectrum from Brunner et.
+ al
+\end_layout
+
+\begin_layout Itemize
+Work on SPH-compatible 
+\begin_inset Formula $S_{N}$
+\end_inset
+
+ transport
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Gray is working,
+ but solvers for the 
+\begin_inset Quotes eld
+\end_inset
+
+sweep
+\begin_inset Quotes erd
+\end_inset
+
+ remain an issue
+\end_layout
+
+\begin_layout Itemize
+Multigroup transport can use a similar rad-hydro algorithm to the diffusion presented here
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Backup slides
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\size largest
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\size largest
+Backup slides
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+SPH interpolation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+SPH is so named because the kernels,
+ 
+\begin_inset Formula $W\left(x,h\right)$
+\end_inset
+
+,
+ smooth out values of the function throughout some smoothing length,
+ 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Start with the definition of the delta function
+\begin_inset VSpace 0.4cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Insert a kernel that approximates the delta function
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Convert the integral to a summation with the centers as quadrature points
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+f\left(x\right) & =\int_{V}\delta\left(x-x'\right)f\left(x'\right)dV'\\
+ & \approx\int_{V}W\left(x-x',h\right)f\left(x'\right)dV'\\
+ & \approx\sum_{j}V_{j}W\left(x-x_{j},h\right)f_{j}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+SPH derivatives
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+In SPH,
+ derivatives are approximated by using this interpolant
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+Use the smoothing function approximation on the derivative
+\end_layout
+
+\begin_layout Enumerate
+Integrate by parts and discard the surface integral
+\end_layout
+
+\begin_layout Enumerate
+Add a term that is equal to zero for symmetry
+\begin_inset VSpace 0.8cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Convert to a summation
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\partial_{x,\alpha}f\left(\bm{x}\right) & \approx\int_{V}W\left(x-x',h\right)\partial_{x'}^{\alpha}f\left(\bm{x}'\right)dV'\\
+ & =-\int_{V}\partial_{x'}^{\alpha}W\left(x-x',h\right)f\left(x'\right)dV'\\
+ & =\partial_{x}^{\alpha}\int_{V}W\left(x-x',h\right)f\left(x'\right)dV'\\
+ & \qquad-f\left(x\right)\partial_{x}^{\alpha}\int_{V}W\left(x-x',h\right)dV'\\
+ & \approx\sum_{j}V_{j}\left(f_{j}-f\left(x\right)\right)\partial_{x}^{\alpha}W\left(x-x_{j},h\right).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Note if this is evaluated at 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+,
+ the derivative is antisymmetric for 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+,
+ and disappears when 
+\begin_inset Formula $i=j$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+SPH diffusion derivative
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+To avoid mixed first and second derivatives in the diffusion derivative,
+ 
+\begin_inset Formula $\partial^{\alpha}\left(g\partial^{\alpha}f\right)$
+\end_inset
+
+,
+ we add together the following two identities,
+\begin_inset Formula 
+\begin{gather*}
+\partial^{\alpha}\left(g\partial^{\gamma}f\right)=g\partial^{\alpha\alpha}f+\partial^{\alpha}g\partial^{\alpha}f,\\
+\partial^{\alpha}\left(g\partial^{\alpha}f\right)=\partial^{\alpha\alpha}\left(gf\right)-f\partial^{\alpha\alpha}g-\partial^{\alpha}g\partial^{\alpha}f,
+\end{gather*}
+
+\end_inset
+
+which results in 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Formula 
+\[
+\partial^{\alpha}\left(g\partial^{\gamma}f\right)=\frac{1}{2}\left[\partial^{\alpha\alpha}\left(gf\right)+g\partial^{\alpha\alpha}f-f\partial^{\alpha\alpha}g\right].
+\]
+
+\end_inset
+
+Since SPH doesn't do second derivatives well,
+ the 
+\begin_inset Formula $\partial^{\alpha\alpha}W_{ij}$
+\end_inset
+
+ term is replaced by a Taylor expansion of the kernel.
+ The SPH approximation of this is 
+\begin_inset Formula 
+\[
+\partial^{\gamma}\left(g\partial^{\gamma}f\right)\bigg|_{x=x_{i}}\approx\frac{1}{2}\sum_{j}V_{j}\left(D_{i}+D_{j}\right)\left(E_{j}-E_{i}\right)\partial^{\gamma\gamma}W_{ij}\approx\sum_{j}V_{j}\left(D_{i}+D_{j}\right)\left(E_{j}-E_{i}\right)\frac{x_{ij}^{\alpha}}{x_{ij}^{\beta}x_{ij}^{\beta}}\partial^{\alpha}W_{ij}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Spatial discretization
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+The material energy equation is 0D and can be solved independently for each point,
+\begin_inset Formula 
+\begin{gather*}
+\frac{\rho_{i}}{\Delta t}\left(e_{i}^{n,\ell+1}-e_{i}^{n-1}\right)+c\sigma_{a,i}B_{i}^{n,\ell+1}-c\sigma_{a,i}E_{i}^{n,\ell+1}-Q_{e,i}^{n}=0.
+\end{gather*}
+
+\end_inset
+
+Given some 
+\begin_inset Formula $Q_{e,i}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{i}^{n,\ell+1}$
+\end_inset
+
+,
+ this equation is solved for 
+\begin_inset Formula $e_{i}^{n,\ell+1}$
+\end_inset
+
+ [with 
+\begin_inset Formula $B\left(T\left(e\right)\right)$
+\end_inset
+
+] using Newton iteration.
+ 
+\end_layout
+
+\begin_layout Frame
+The radiation energy equation with the diffusion derivative we just introduced,
+ 
+\begin_inset Formula 
+\begin{align*}
+ & \frac{1}{\Delta t}E_{i}^{n,\ell+1}-\sum_{j}V_{j}\left(\frac{c\lambda_{i}}{\sigma_{t,i}}+\frac{c\lambda_{j}}{\sigma_{t,j}}\right)\left(E_{i}^{n,\ell+1}-E_{j}^{n,\ell+1}\right)\frac{x_{ij}^{\alpha}}{x_{ij}^{\beta}x_{ij}^{\beta}}\partial_{i}^{\alpha}W_{ij}+c\sigma_{a,i}f_{i}E_{i}^{n,\ell+1}\\
+ & \qquad=\frac{1}{\Delta t}E_{i}^{n-1}+c\sigma_{a,i}B_{i}^{n,\ell}-\left(1-f_{i}\right)c\sigma_{a,i}E_{i}^{n,\ell}+Q_{E,i}^{n}.
+\end{align*}
+
+\end_inset
+
+is solved using an iterative linear solver (Hypre or Trilinos).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Reproducing kernels
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+The standard SPH kernels cannot reproduce even a constant solution exactly.
+ One way to enhance the SPH kernels so that they can reproduce up to a chosen polynomial order exactly is reproducing kernels.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The 
+\begin_inset Formula $P_{ij}$
+\end_inset
+
+ is a set of polynomials,
+ e.g.
+ 
+\begin_inset Formula $P_{ij}=\left[1,x_{ij},y_{ij},z_{ij}\right]$
+\end_inset
+
+ for linear corrections.
+ The 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ is corrections for the point 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The corrections are imposed by ensuring that the kernel exactly reproduces a polynomial.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset VSpace -1cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Enhance the kernels:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+W_{ij}\to W_{ij}^{R}=P_{ij}^{\top}C_{i}W_{ij}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Calculate the corrections:
+\begin_inset Formula 
+\[
+\left[\sum_{j}V_{j}P_{ij}P_{ij}^{\top}C_{i}W_{ij}\right]C_{i}=\left[\begin{array}{c}
+1\\
+0\\
+0\\
+\vdots
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For zeroth order:
+\begin_inset Formula 
+\begin{gather*}
+\sum V_{j}W_{ij}^{R}C_{i}=1\\
+\Downarrow\\
+C_{i}=\left(\sum V_{j}W_{ij}^{R}\right)^{-1}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
