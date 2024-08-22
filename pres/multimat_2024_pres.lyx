@@ -27,7 +27,7 @@
     \begin{beamercolorbox}[wd=0.85\paperwidth,left,leftskip=0.5em,colsep=0.2em,ht=0.4cm,dp=0.0ex]{sidebar}%
 		\includegraphics[height=0.3cm]{figs/logo_llnl_black}%
 		\hspace{-1.3cm}
-		\scalebox{0.5}{LLNL-PRES-XXXXXX}
+		\scalebox{0.5}{LLNL-PRES-868578}
         \usebeamercolor[fg]{section in head/foot}
 		\hfill
         \scriptsize
@@ -3994,12 +3994,6 @@ small
 These will be compared to another rad-hydro code.
  For now,
  this shows that the code is running.
- 
-\end_layout
-
-\begin_layout Frame
-Note:
- May replace density with Kull results if those are working soon.
  
 \end_layout
 
