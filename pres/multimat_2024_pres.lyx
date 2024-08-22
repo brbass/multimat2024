@@ -3991,10 +3991,8 @@ small
 \end_layout
 
 \begin_layout Frame
-These will be compared to another rad-hydro code.
- For now,
- this shows that the code is running.
- 
+Future work:
+ Compare these to another rad-hydro code.
 \end_layout
 
 \begin_layout Frame
@@ -4016,7 +4014,7 @@ status open
 \backslash
 animategraphics[width=1.0
 \backslash
-textwidth]{3}{../movies/ablation-h-only}{0000}{0023}
+textwidth]{3}{../movies/ablation-isotopes}{0000}{0044}
 \end_layout
 
 \end_inset
